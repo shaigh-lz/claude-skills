@@ -4,15 +4,51 @@ Custom skills for Claude Code CLI to automate workflows and enhance productivity
 
 **Repository:** https://github.com/shaigh-lz/claude-skills
 
+---
+
+## 📚 Documentation
+
+- **[Strategic Plan](docs/STRATEGIC-PLAN.md)** - Vision and strategy for automated status reporting
+- **[User Guide](docs/BIZFILINGS-STATUS-GUIDE.md)** - Complete guide for using `/bizfilings-status`
+- **[Prototype Agent](docs/PROTOTYPE-AGENT.md)** - Info about the original prototype and migration
+- **[Future Roadmap](docs/FUTURE-ROADMAP.md)** - Planned enhancements and ideas
+- **[Team Access](docs/TEAM-ACCESS.md)** - How to install and use skills as a team member
+
+---
+
+## 🚀 Quick Start
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/shaigh-lz/claude-skills.git ~/.claude/skills
+   ```
+
+2. **Configure settings:**
+   ```bash
+   cp config.template.json ~/.claude/bizfilings-pm-config.json
+   # Edit with your settings
+   ```
+
+3. **Run a skill:**
+   ```
+   /bizfilings-status
+   ```
+
+See [TEAM-ACCESS.md](docs/TEAM-ACCESS.md) for detailed installation instructions.
+
+---
+
 ## Skills
 
 ### bizfilings-status
 Generates comprehensive weekly status reports for the BIZFILINGS Core API project by:
 - Querying Jira for epic and story progress
 - Calculating completion metrics and identifying blockers
-- Updating a Google Doc with formatted markdown report
+- Creating a Google Doc with formatted markdown report
 
 **Usage:** `/bizfilings-status`
+
+**Documentation:** [BIZFILINGS-STATUS-GUIDE.md](docs/BIZFILINGS-STATUS-GUIDE.md)
 
 **Configuration:** Requires `~/.claude/bizfilings-pm-config.json` with Jira and Google Docs settings.
 

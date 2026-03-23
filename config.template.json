@@ -1,0 +1,20 @@
+{
+  "jira": {
+    "cloudId": "b9687312-bc3e-4dd3-ae6a-3b56aa5ac702",
+    "projectKey": "BIZFILINGS",
+    "epicSearchJql": "project = BIZFILINGS AND issuetype = Epic AND summary ~ 'Core API'",
+    "boardUrl": "https://legalzoom.atlassian.net/jira/software/c/projects/BIZFILINGS/boards/2289"
+  },
+  "google": {
+    "folderId": "1NDUmxDfWczFwWnMSSgzN8hU7eRK5PH0K",
+    "createNewDocEachRun": true,
+    "docNamePrefix": "BIZFILINGS Core API Status Report"
+  },
+  "report": {
+    "periodDays": 7,
+    "includeBacklog": true,
+    "maxBacklogEpics": 10,
+    "showCompletedDays": 30,
+    "maxStoriesPerEpic": 10
+  }
+}

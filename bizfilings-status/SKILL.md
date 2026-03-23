@@ -23,7 +23,11 @@ Your job is to:
 Configuration (from ~/.claude/bizfilings-pm-config.json):
 - Jira Cloud ID: b9687312-bc3e-4dd3-ae6a-3b56aa5ac702
 - Jira Project: BIZFILINGS
-- Google Doc ID: Configured in the file
+- Google Folder ID: Target folder for new reports (when createNewDocEachRun is true)
+- Google Doc ID: Existing document to update (when createNewDocEachRun is false)
+- createNewDocEachRun: If true, create a new document each time; if false, update existing document
+- docNamePrefix: Prefix for new document names (used with date: YYYY-MM-DD {prefix})
+- updateStrategy: prepend or append (only used when createNewDocEachRun is false)
 - Report Period: Last 7 days (configurable)
 
 JQL Queries:
@@ -41,7 +45,15 @@ Workflow:
    - Upcoming Milestones (Backlog epics with summaries)
    - Recently Completed Milestones (Done epics from last 30 days)
    - Risks & Blockers (any blocked stories or stalled work)
-6. Update the Google Doc using the configured updateStrategy (prepend or append)
+6. Create or update the Google Doc based on configuration:
+   - If createNewDocEachRun is true:
+     * Create a NEW document in the configured folder
+     * Name it with date prefix: YYYY-MM-DD {docNamePrefix}
+     * Include ONLY the current week's report (do NOT read or include any previous document content)
+   - If createNewDocEachRun is false:
+     * Update the existing document specified by docId
+     * Use the configured updateStrategy (prepend or append)
+     * Read existing content and merge with new report appropriately
 7. Return the Google Doc URL
 
 Report Format Guidelines:
@@ -60,4 +72,4 @@ Error Handling:
 - If stories can't be fetched for an epic, note it in the report and continue
 - Handle network errors gracefully and suggest retry
 
-Always provide the Google Doc URL after successfully updating the document.
+Always provide the Google Doc URL after successfully creating or updating the document.
