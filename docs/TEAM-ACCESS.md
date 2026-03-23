@@ -9,7 +9,7 @@ This guide helps team members install and use the Claude skills repository.
 
 Claude skills are reusable workflows that automate common tasks. The skills in this repository currently include:
 
-- `/bizfilings-status` - Generate weekly status reports for BIZFILINGS Core API
+- `/core-api-proj-status` - Generate weekly status reports for Core API
 
 More skills will be added over time. All skills are shareable via this Git repository.
 
@@ -77,7 +77,7 @@ ls -la ~/.claude/skills
 
 You should see:
 ```
-bizfilings-status/
+core-api-proj-status/
 docs/
 README.md
 sync.sh
@@ -86,7 +86,7 @@ sync.sh
 
 In Claude Code, skills will now be available:
 ```
-/bizfilings-status
+/core-api-proj-status
 ```
 
 ### Step 3: Configure Personal Settings
@@ -114,7 +114,7 @@ Edit `~/.claude/bizfilings-pm-config.json` with your editor:
   "google": {
     "folderId": "1NDUmxDfWczFwWnMSSgzN8hU7eRK5PH0K",
     "createNewDocEachRun": true,
-    "docNamePrefix": "BIZFILINGS Core API Status Report"
+    "docNamePrefix": "Core API Project - Status Report"
   },
   "report": {
     "periodDays": 7,
@@ -133,7 +133,7 @@ Edit `~/.claude/bizfilings-pm-config.json` with your editor:
 Run the status report skill:
 
 ```
-/bizfilings-status
+/core-api-proj-status
 ```
 
 Expected result:
@@ -166,16 +166,16 @@ Check for updates:
 
 ### Available Skills
 
-#### `/bizfilings-status`
+#### `/core-api-proj-status`
 
 Generate weekly status reports.
 
 **Usage:**
 ```
-/bizfilings-status
+/core-api-proj-status
 ```
 
-**Documentation:** See `docs/BIZFILINGS-STATUS-GUIDE.md`
+**Documentation:** See `docs/CORE-API-STATUS-GUIDE.md`
 
 **Time:** ~30 seconds
 **Output:** Google Doc URL
@@ -244,7 +244,7 @@ Write clear, descriptive commit messages:
 
 **Good examples:**
 - ✅ "Add error handling for missing Jira credentials"
-- ✅ "Update bizfilings-status to show velocity metrics"
+- ✅ "Update core-api-proj-status to show velocity metrics"
 - ✅ "Fix incorrect progress calculation in epic summaries"
 
 **Bad examples:**
@@ -386,11 +386,11 @@ config.json          # Don't commit (in .gitignore)
 
 ```
 ~/.claude/skills/
-├── bizfilings-status/       # Status report skill
+├── core-api-proj-status/       # Status report skill
 │   └── SKILL.md
 ├── docs/                    # Documentation
 │   ├── STRATEGIC-PLAN.md
-│   ├── BIZFILINGS-STATUS-GUIDE.md
+│   ├── CORE-API-STATUS-GUIDE.md
 │   ├── PROTOTYPE-AGENT.md
 │   ├── FUTURE-ROADMAP.md
 │   └── TEAM-ACCESS.md (this file)
@@ -403,7 +403,7 @@ config.json          # Don't commit (in .gitignore)
 
 1. ✅ Install skills repository
 2. ✅ Configure personal settings
-3. ✅ Test with `/bizfilings-status`
+3. ✅ Test with `/core-api-proj-status`
 4. 📚 Read the documentation
 5. 💡 Share feedback and ideas
 6. 🚀 Contribute improvements

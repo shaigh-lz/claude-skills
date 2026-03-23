@@ -9,7 +9,7 @@ Custom skills for Claude Code CLI to automate workflows and enhance productivity
 ## 📚 Documentation
 
 - **[Strategic Plan](docs/STRATEGIC-PLAN.md)** - Vision and strategy for automated status reporting
-- **[User Guide](docs/BIZFILINGS-STATUS-GUIDE.md)** - Complete guide for using `/bizfilings-status`
+- **[User Guide](docs/CORE-API-STATUS-GUIDE.md)** - Complete guide for using `/core-api-proj-status`
 - **[Prototype Agent](docs/PROTOTYPE-AGENT.md)** - Info about the original prototype and migration
 - **[Future Roadmap](docs/FUTURE-ROADMAP.md)** - Planned enhancements and ideas
 - **[Team Access](docs/TEAM-ACCESS.md)** - How to install and use skills as a team member
@@ -31,7 +31,7 @@ Custom skills for Claude Code CLI to automate workflows and enhance productivity
 
 3. **Run a skill:**
    ```
-   /bizfilings-status
+   /core-api-proj-status
    ```
 
 See [TEAM-ACCESS.md](docs/TEAM-ACCESS.md) for detailed installation instructions.
@@ -40,15 +40,15 @@ See [TEAM-ACCESS.md](docs/TEAM-ACCESS.md) for detailed installation instructions
 
 ## Skills
 
-### bizfilings-status
-Generates comprehensive weekly status reports for the BIZFILINGS Core API project by:
+### core-api-proj-status
+Generates comprehensive weekly status reports for the Core API project by:
 - Querying Jira for epic and story progress
 - Calculating completion metrics and identifying blockers
 - Creating a Google Doc with formatted markdown report
 
-**Usage:** `/bizfilings-status`
+**Usage:** `/core-api-proj-status`
 
-**Documentation:** [BIZFILINGS-STATUS-GUIDE.md](docs/BIZFILINGS-STATUS-GUIDE.md)
+**Documentation:** [CORE-API-STATUS-GUIDE.md](docs/CORE-API-STATUS-GUIDE.md)
 
 **Configuration:** Requires `~/.claude/bizfilings-pm-config.json` with Jira and Google Docs settings.
 
@@ -83,7 +83,7 @@ To push skill updates to GitHub with a clear commit message:
 - Use imperative mood (e.g., "Add feature" not "Added feature")
 - Examples:
   - ✅ "Add error handling for missing Jira credentials"
-  - ✅ "Update bizfilings-status to show velocity metrics"
+  - ✅ "Update core-api-proj-status to show velocity metrics"
   - ✅ "Fix incorrect progress calculation in epic summaries"
   - ❌ "Update" (too vague)
   - ❌ "Changes" (not descriptive)

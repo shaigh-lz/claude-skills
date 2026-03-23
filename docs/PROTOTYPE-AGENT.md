@@ -2,7 +2,7 @@
 
 **Last Updated:** March 23, 2026
 **Agent Name:** `bizfilings-pm`
-**Status:** Superseded by `/bizfilings-status` skill
+**Status:** Superseded by `/core-api-proj-status` skill
 
 ## What is the Prototype Agent?
 
@@ -21,7 +21,7 @@ The `bizfilings-pm` agent was the original proof-of-concept implementation for a
 | Feature | Agent | Skill |
 |---------|-------|-------|
 | **Location** | `~/.claude/agents/` | `~/.claude/skills/` |
-| **Invocation** | `@bizfilings-pm` in conversation | `/bizfilings-status` as command |
+| **Invocation** | `@bizfilings-pm` in conversation | `/core-api-proj-status` as command |
 | **Sharing** | Not easily shareable | Git repo for team sharing |
 | **Version Control** | Manual | Automatic via Git |
 | **Updates** | Edit local file | Pull from GitHub |
@@ -71,7 +71,7 @@ Note: The agent does NOT support `createNewDocEachRun` mode.
 
 ### Why the Skill is Better
 
-The `/bizfilings-status` skill improves on the agent:
+The `/core-api-proj-status` skill improves on the agent:
 
 1. **Shareable with Team**
    - Skill lives in Git repository
@@ -85,7 +85,7 @@ The `/bizfilings-status` skill improves on the agent:
    - Supports both modes (new doc or update existing)
 
 3. **Cleaner Invocation**
-   - Simple `/bizfilings-status` command
+   - Simple `/core-api-proj-status` command
    - No need for conversation context
    - Consistent behavior every time
 
@@ -116,13 +116,13 @@ If you're currently using the agent:
    "google": {
      "folderId": "1NDUmxDfWczFwWnMSSgzN8hU7eRK5PH0K",
      "createNewDocEachRun": true,
-     "docNamePrefix": "BIZFILINGS Core API Status Report"
+     "docNamePrefix": "Core API Project - Status Report"
    }
    ```
 
 3. **Test the Skill**
    ```
-   /bizfilings-status
+   /core-api-proj-status
    ```
 
 4. **Verify Reports**
@@ -137,7 +137,7 @@ If you're currently using the agent:
 ### When It's Safe to Delete
 
 Delete the agent when:
-- ✓ You've successfully run `/bizfilings-status` at least once
+- ✓ You've successfully run `/core-api-proj-status` at least once
 - ✓ You've verified the reports meet your needs
 - ✓ Your team is using the skill
 - ✓ You're no longer experimenting with the agent
@@ -253,9 +253,9 @@ Idea → Agent (prototype) → Skill (production) → Share with team
 ## Next Steps
 
 1. Delete the agent once migrated
-2. Use `/bizfilings-status` for all future reports
+2. Use `/core-api-proj-status` for all future reports
 3. Share the skills repo with your team
-4. See `BIZFILINGS-STATUS-GUIDE.md` for full documentation
+4. See `CORE-API-STATUS-GUIDE.md` for full documentation
 5. See `FUTURE-ROADMAP.md` for planned enhancements
 
 ## Questions?

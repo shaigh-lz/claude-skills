@@ -1,11 +1,11 @@
-# BIZFILINGS Status Report Skill - User Guide
+# Core API Status Report Skill - User Guide
 
 **Last Updated:** March 23, 2026
-**Skill Name:** `/bizfilings-status`
+**Skill Name:** `/core-api-proj-status`
 
 ## Overview
 
-The `/bizfilings-status` skill generates comprehensive weekly status reports for the BIZFILINGS Core API project. It automatically:
+The `/core-api-proj-status` skill generates comprehensive weekly status reports for the Core API project. It automatically:
 - Queries Jira for all Core API-related epics and stories
 - Calculates progress metrics and completion percentages
 - Identifies blockers and risks
@@ -73,7 +73,7 @@ Create `~/.claude/bizfilings-pm-config.json`:
   "google": {
     "folderId": "1NDUmxDfWczFwWnMSSgzN8hU7eRK5PH0K",
     "createNewDocEachRun": true,
-    "docNamePrefix": "BIZFILINGS Core API Status Report"
+    "docNamePrefix": "Core API Project - Status Report"
   },
   "report": {
     "periodDays": 7,
@@ -99,7 +99,7 @@ You should see `atlassian` and `lz-google-mcp` listed and connected.
 
 Run the skill:
 ```bash
-/bizfilings-status
+/core-api-proj-status
 ```
 
 Expected output:
@@ -114,7 +114,7 @@ Expected output:
 
 Simply run the skill in Claude Code:
 ```
-/bizfilings-status
+/core-api-proj-status
 ```
 
 The skill will:
@@ -130,7 +130,7 @@ The skill will:
 
 **Duration:** ~30 seconds
 **Output Format:** Google Doc URL
-**Document Name:** `YYYY-MM-DD BIZFILINGS Core API Status Report`
+**Document Name:** `YYYY-MM-DD Core API Project - Status Report`
 **Location:** Shared Drive folder (configured in `folderId`)
 
 ### Example Output

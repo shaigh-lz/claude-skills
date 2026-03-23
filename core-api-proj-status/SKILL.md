@@ -1,6 +1,6 @@
 ---
-name: bizfilings-status
-description: Generate weekly status report for BIZFILINGS Core API project by querying Jira and updating Google Docs
+name: core-api-proj-status
+description: Generate weekly status report for Core API project by querying Jira and updating Google Docs
 tools:
   - mcp__atlassian__searchJiraIssuesUsingJql
   - mcp__atlassian__getJiraIssue
@@ -11,7 +11,7 @@ tools:
   - Read
 ---
 
-Generate a comprehensive weekly status report for the BIZFILINGS Core API project.
+Generate a comprehensive weekly status report for the Core API project.
 
 Your job is to:
 1. Read configuration from ~/.claude/bizfilings-pm-config.json
@@ -49,6 +49,7 @@ Workflow:
    - If createNewDocEachRun is true:
      * Create a NEW document in the configured folder
      * Name it with date prefix: YYYY-MM-DD {docNamePrefix}
+     * Set the document title to "Core API Project - Status Report"
      * Include ONLY the current week's report (do NOT read or include any previous document content)
    - If createNewDocEachRun is false:
      * Update the existing document specified by docId

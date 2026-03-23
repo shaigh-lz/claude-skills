@@ -39,7 +39,7 @@ Traditional status reporting requires:
 
 ```mermaid
 graph LR
-    A[User runs /bizfilings-status] --> B[Claude queries Jira via MCP]
+    A[User runs /core-api-proj-status] --> B[Claude queries Jira via MCP]
     B --> C[Analyze epics and stories]
     C --> D[Calculate metrics]
     D --> E[Generate markdown report]
@@ -47,7 +47,7 @@ graph LR
     F --> G[Return document URL]
 ```
 
-1. User invokes the skill: `/bizfilings-status`
+1. User invokes the skill: `/core-api-proj-status`
 2. Claude reads configuration from `~/.claude/bizfilings-pm-config.json`
 3. Claude queries Jira for epics and stories using JQL
 4. Claude calculates progress metrics, identifies blockers
@@ -147,7 +147,7 @@ Two approaches were evaluated:
 
 #### Option B: Project-Specific Skills
 ```
-/bizfilings-status
+/core-api-proj-status
 /other-project-status
 ```
 
@@ -196,7 +196,7 @@ Track these metrics to measure effectiveness:
 ## Rollout Plan
 
 ### Phase 1: Pilot (Current) ✓
-- Single project (BIZFILINGS Core API)
+- Single project (Core API)
 - Single user (PM)
 - Prove value and refine
 

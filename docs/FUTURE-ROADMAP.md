@@ -83,7 +83,7 @@ This document outlines potential enhancements, features, and experiments for the
 **Goal:** Post status updates to Slack channels
 
 **Features:**
-- Post summary to #bizfilings-status channel
+- Post summary to #core-api-proj-status channel
 - Include key metrics as message
 - Link to full Google Doc
 - Optional: daily standups bot
@@ -104,7 +104,7 @@ This document outlines potential enhancements, features, and experiments for the
 
 **Approach A: Multiple Project-Specific Skills**
 ```bash
-/bizfilings-status
+/core-api-proj-status
 /otherproject-status
 ```
 
