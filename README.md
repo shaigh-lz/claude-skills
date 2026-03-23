@@ -31,17 +31,34 @@ To use these skills in your Claude Code environment:
 
 ## Syncing Updates
 
-To push skill updates to GitHub:
+To push skill updates to GitHub with a clear commit message:
 
 ```bash
+# With message as argument
+~/.claude/skills/sync.sh "Add new feature X to improve Y"
+
+# Or run interactively (will prompt for message)
 ~/.claude/skills/sync.sh
 ```
+
+**Commit Message Guidelines:**
+- Describe **what** changed and **why**
+- Be specific and clear
+- Use imperative mood (e.g., "Add feature" not "Added feature")
+- Examples:
+  - ✅ "Add error handling for missing Jira credentials"
+  - ✅ "Update bizfilings-status to show velocity metrics"
+  - ✅ "Fix incorrect progress calculation in epic summaries"
+  - ❌ "Update" (too vague)
+  - ❌ "Changes" (not descriptive)
 
 Or manually:
 ```bash
 cd ~/.claude/skills
 git add -A
-git commit -m "Update skills"
+git commit -m "Clear description of what changed and why
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
 git push
 ```
 
@@ -78,7 +95,10 @@ tools:
 Your skill instructions here...
 ```
 3. Test with `/my-skill`
-4. Sync to GitHub: `~/.claude/skills/sync.sh`
+4. Sync to GitHub with a clear message:
+   ```bash
+   ~/.claude/skills/sync.sh "Add my-skill for doing X"
+   ```
 
 ## Requirements
 
