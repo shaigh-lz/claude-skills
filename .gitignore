@@ -1,0 +1,24 @@
+# Sensitive configuration files
+*-config.json
+*.env
+*.key
+credentials.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Node modules if any skills use them
+node_modules/
