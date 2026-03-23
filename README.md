@@ -2,6 +2,8 @@
 
 Custom skills for Claude Code CLI to automate workflows and enhance productivity.
 
+**Repository:** https://github.com/shaigh-lz/claude-skills
+
 ## Skills
 
 ### bizfilings-status
@@ -18,9 +20,30 @@ Generates comprehensive weekly status reports for the BIZFILINGS Core API projec
 
 To use these skills in your Claude Code environment:
 
-1. Copy the skill directories to your `~/.claude/skills/` directory
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/shaigh-lz/claude-skills.git ~/.claude/skills
+   ```
+
 2. Ensure any required configuration files are in place
+
 3. Invoke skills using `/skill-name` in Claude Code
+
+## Syncing Updates
+
+To push skill updates to GitHub:
+
+```bash
+~/.claude/skills/sync.sh
+```
+
+Or manually:
+```bash
+cd ~/.claude/skills
+git add -A
+git commit -m "Update skills"
+git push
+```
 
 ## Skill Structure
 
@@ -32,6 +55,9 @@ Example structure:
 skills/
 ├── skill-name/
 │   └── SKILL.md
+├── README.md
+├── .gitignore
+└── sync.sh
 ```
 
 ## Creating New Skills
@@ -51,7 +77,8 @@ tools:
 
 Your skill instructions here...
 ```
-3. Invoke with `/my-skill`
+3. Test with `/my-skill`
+4. Sync to GitHub: `~/.claude/skills/sync.sh`
 
 ## Requirements
 
